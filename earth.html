@@ -54,7 +54,7 @@
 				});
 				//指定渲染器的高宽（和屏幕大小一致）
 				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( width, height );
+				renderer.setSize( window.innerWidth, window.innerHeight );
 				//追加 【canvas】 元素到 【canvas3d】 元素中。
 				document.getElementById('canvas3d').appendChild(renderer.domElement);
 
@@ -112,12 +112,12 @@
 
 				material.transparent = true;
 				//纹理贴图
-				material.map = loader.load('earth/earth4.jpg');
+				material.map = loader.load('http://image.hotpoor.org/a68f604553ef4266895279bbcec53c02_7cddb76f657dc2f936c1c97593007ba3?imageView2/2/w/300');
 				//凸凹贴图
-				material.bumpMap = loader.load('earth/earth_bump.jpg');
+				material.bumpMap = loader.load('http://image.hotpoor.org/a68f604553ef4266895279bbcec53c02_c18663ad75b513b666e899760205216a?imageView2/2/w/300');
 				material.bumpScale = 5; //数字越大，凸凹程度表现的越明显
 				//高光贴图
-				material.specularMap = loader.load('earth/earth_spec.jpg');
+				material.specularMap = loader.load('http://image.hotpoor.org/a68f604553ef4266895279bbcec53c02_3f3a1e348baebe626845cfa033e7e8f1?imageView2/2/w/300');
 				material.specular = new THREE.Color("#909090");
 
 				material.shininess = 8; //设置高光亮度，缺省值30
