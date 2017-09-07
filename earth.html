@@ -54,13 +54,13 @@
 				});
 				//指定渲染器的高宽（和屏幕大小一致）
 				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.setSize( width, height );
 				//追加 【canvas】 元素到 【canvas3d】 元素中。
 				document.getElementById('canvas3d').appendChild(renderer.domElement);
 
 				//设置canvas背景色(clearColor)和背景色透明度（clearAlpha）
 				renderer.setClearColor(0x000000, 0.5);
-				// window.addEventListener('deviceorientation', setDeviceOrientationControls, true);
+				window.addEventListener('deviceorientation', setDeviceOrientationControls, true);
 
 			}
 
