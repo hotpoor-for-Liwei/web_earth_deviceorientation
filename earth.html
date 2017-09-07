@@ -205,9 +205,14 @@
 		</style>
 	</head>
 
-	<body onload='threeStart();'>
+	<body>
 		<!--盛放canvas的容器-->
 		<div id="canvas3d"></div>
 	</body>
 
 </html>
+<script type="text/javascript">
+	$(window).on("load",function(){
+		threeStart();
+	})
+</script>
