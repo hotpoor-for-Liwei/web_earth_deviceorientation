@@ -10,7 +10,25 @@
 		<script src="https://threejs.org/examples/js/controls/DeviceOrientationControls.js"></script>
 		<script src="js/StereoEffect.js"></script>
 		<script src="js/jquery-3.2.0.min.js"></script>
-		<script type="text/javascript">
+		
+		<style type="text/css">
+			
+			div#canvas3d {
+				width: 100%;
+				height: 100%;
+				background-color: #EEEEEE;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--盛放canvas的容器-->
+		<div id="canvas3d"></div>
+	</body>
+
+</html>
+
+<script type="text/javascript">
 			//开启Three.js渲染器
 			//开启Three.js渲染器:WebGLRenderer
 			　　　　　　　 //声明全局变量
@@ -169,11 +187,6 @@
 				 },2000);     
 			}
 
-
-
-			$(window).on("resize",function(){         
-				onWindowResize();     
-			});
 			//随浏览器窗口变化而变化     
 			function onWindowResize() {          
 			 	camera.aspect = window.innerWidth / window.innerHeight;         
@@ -195,24 +208,11 @@
 
 			}
 		</script>
-		<style type="text/css">
-			
-			div#canvas3d {
-				width: 100%;
-				height: 100%;
-				background-color: #EEEEEE;
-			}
-		</style>
-	</head>
-
-	<body>
-		<!--盛放canvas的容器-->
-		<div id="canvas3d"></div>
-	</body>
-
-</html>
 <script type="text/javascript">
 	$(window).on("load",function(){
 		threeStart();
 	})
+	$(window).on("resize",function(){         
+		onWindowResize();     
+	});
 </script>
